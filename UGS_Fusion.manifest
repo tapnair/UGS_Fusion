@@ -1,0 +1,13 @@
+{
+	"autodeskProduct":	"Fusion360",
+	"type":	"addin",
+	"id":	"c12d06bb-4bc4-4756-8faf-46e06e81e4b8",
+	"author":	"Patrick Rainsberry",
+	"description":	{
+		"":	"Universal G-Code Sender plugin for Fusion 360"
+	},
+	"version":	"0.1",
+	"runOnStartup":	false,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
