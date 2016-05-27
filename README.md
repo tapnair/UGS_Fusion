@@ -3,7 +3,7 @@ Fusion 360 Universal Gcode Sender Plugin
 
 Easily post Fusion 360 CAM operations to Universal Gcode Sender
 
-![Nester Cover](./Resources/UGS_Cover.png)
+![UGS Cover](./Resources/UGS_Cover.png)
 
 ## Usage:
 First see [How to install sample Add-Ins and Scripts](https://rawgit.com/AutodeskFusion360/AutodeskFusion360.github.io/master/Installation.html)
