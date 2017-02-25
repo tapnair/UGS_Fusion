@@ -38,3 +38,4 @@ Samples are licensed under the terms of the [MIT License](http://opensource.org/
 
 Written by Patrick Rainsberry <br /> (Autodesk Fusion 360 Business Development)
 
+[![Analytics](https://ga-beacon.appspot.com/UA-41076924-3/UGSFusion)](https://github.com/igrigorik/ga-beacon)
