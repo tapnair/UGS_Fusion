@@ -18,19 +18,26 @@ handlers = []
 # Global Program ID for settings
 programID = 'UGS_Fusion'
 
+
+def get_folder():
+    # Get user's home directory
+    home = expanduser("~")
+
+    # Create a subdirectory for this application settings
+    home += '/' + programID + '/'
+
+    # Create the folder if it does not exist
+    if not os.path.exists(home):
+        os.makedirs(home)
+
+    return home
+
+
 # Will get the proposed location of the settings file for this application
 # Note currently creates the directory with out being prompted to save settings
 def getFileName():
     
-    # Get user's home directory
-    home = expanduser("~")
-    
-    # Create a subdirectory for this application settings
-    home += '/' + programID + '/'
-    
-    # Create the folder if it does not exist
-    if not os.path.exists(home):
-        os.makedirs(home)
+    home = get_folder()
     
     # Get full path for the settings file
     xmlFileName = home  + 'settings.xml'
@@ -121,7 +128,9 @@ def exportFile(opName, UGS_path, UGS_post, UGS_platform):
             toPost = operation
             
     # Create a temporary directory for post file
-    outputFolder = tempfile.mkdtemp()
+    # outputFolder = tempfile.mkdtemp()
+
+    outputFolder = get_folder() + "//output/"
     
     # Set the post options        
     postConfig = os.path.join(cam.genericPostFolder, UGS_post) 
@@ -138,7 +147,7 @@ def exportFile(opName, UGS_path, UGS_post, UGS_platform):
 
     # Use subprocess to launch UGS in a new process, check if platform or java
     if UGS_platform:
-        subprocess.Popen([UGS_path, '--open', '%s'% resultFilename])
+        subprocess.Popen([UGS_path, '--open', '%s' % resultFilename])
     else:
         subprocess.Popen(['java', '-jar', UGS_path, '--open', '%s'% resultFilename])
    
